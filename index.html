@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JARVIS Assistant</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="avatar.png">
+</head>
+<body>
+  <div class="container">
+    <!-- Avatar -->
+    <div class="image-container">
+      <img src="giphy.gif" alt="JARVIS Avatar">
+    </div>
+
+    <!-- Chatbox -->
+    <div id="chatbox" class="chatbox"></div>
+
+    <!-- Input Controls -->
+    <div class="input-area">
+      <input type="text" id="manualInput" placeholder="Type your message...">
+      <button id="send">Send</button>
+      <button class="talk">🎤</button>
+    </div>
+
+    <!-- Personality Selector -->
+    <div class="settings">
+      <label for="personalitySelect">Personality Mode:</label>
+      <select id="personalitySelect">
+        <option value="formal">Formal</option>
+        <option value="casual">Casual</option>
+        <option value="funny">Funny</option>
+      </select>
+    </div>
+
+    <!-- Voice Settings -->
+    <div class="settings">
+      <label for="voiceSelect">Voice:</label>
+      <select id="voiceSelect"></select>
+    </div>
+
+    <div class="settings sliders">
+      <label>Rate: <input id="rate" type="range" min="0.5" max="2" step="0.1" value="1"></label>
+      <label>Pitch: <input id="pitch" type="range" min="0" max="2" step="0.1" value="1"></label>
+      <label>Volume: <input id="volume" type="range" min="0" max="1" step="0.1" value="1"></label>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

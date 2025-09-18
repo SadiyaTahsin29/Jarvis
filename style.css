@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #1e1e2f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: #2c2c44;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #00ffff;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.controls select,
+.controls input[type="range"],
+.controls button {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.chat-container {
+    display: flex;
+    gap: 15px;
+    background: #1c1c33;
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 400px;
+}
+
+.image-container {
+    flex: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 15px blue);
+}
+
+.image-container img.speaking {
+    transform: scale(1.1) rotate(-3deg);
+    filter: drop-shadow(0 0 25px #00ffff);
+}
+
+#chatbox {
+    flex: 1;
+    max-height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px;
+}
+
+.message {
+    padding: 8px 12px;
+    border-radius: 12px;
+    max-width: 80%;
+    word-wrap: break-word;
+    transition: all 0.3s ease;
+}
+
+.message.user {
+    background: #00aaff;
+    align-self: flex-end;
+    color: #fff;
+}
+
+.message.jarvis {
+    background: #4444ff;
+    align-self: flex-start;
+    color: #fff;
+}
+
+.message.typing {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.input-area button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    background: #00ffff;
+    color: #000;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.input-area button:hover {
+    background: #00c8c8;
+}
